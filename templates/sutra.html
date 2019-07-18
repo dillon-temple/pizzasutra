@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/css.css')}}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/parallax.js-1.5.0/parallax.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="invis"></div>
+      <a class="header_text">PIZZA SUTRA</a>
+      <div class="socialmedia">
+        <a href="https://www.facebook.com/pizzasutramke/"><img class="sm_icon" src="{{ url_for('static', filename='facebook.png')}}"></a>
+        <a href="https://www.youtube.com/channel/UCL6rEkDZjr-jzuPWLrO0bew/featured"><img class="sm_icon" src="{{ url_for('static', filename='youtube.png')}}"></a>
+        <a href="https://www.instagram.com/pizzasutramke/"><img class="sm_icon" src="{{ url_for('static', filename='instagram.png')}}"></a>
+        <a href="https://twitter.com/pizzasutramke"><img class="sm_icon" src="{{ url_for('static', filename='twitter.png')}}"></a>
+      </div>
+    </div>
+    <div class="header_space"></div>
+    <div class="wrapper" data-parallax="scroll" data-speed="0.05" data-naturalHeight="1365px" data-naturalWidth="2048px" data-position="center center" data-image-src="{{ url_for('static', filename='pizzalight.jpeg')}}">
+      <div class="youtube_main">
+      <iframe class="new_youtube"id="re0"src="" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+      </div>
+    </div>
+    <div class="section">
+          <div class="spin"></div>
+          <div class="content_container">
+                <a class="twitter-timeline" data-width="100%" data-height="100%" data-link-color="#000" data-theme="dark"
+                  href="https://twitter.com/pizzasutramke" data-chrome="noheader transparent nofooter nofooter noborders">Tweets
+                  by Pizza Sutra</a>
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+    </div>
+    <div class="wrapper2" data-parallax="scroll" data-speed="0.1" data-naturalHeight="960px" data-naturalWidth="960px" data-position="center center"
+      data-image-src="{{ url_for('static', filename='nom.jpeg')}}">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+    </div>
+        <div class="section2">
+          <div class="random_episode">
+            <iframe class="new_youtube2 re1" id="re1" src="" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
+          <div class="random_episode re2" >
+            <iframe class="new_youtube2" id="re2" src="" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
+          <!-- <div class="random_episode re3" >
+            <iframe class="new_youtube2" id="re3" src="" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div> -->
+        </div>
+        <div class="wrapper3" data-parallax="scroll" data-speed="0.1" data-naturalHeight="1251px" data-naturalWidth="2987px" data-position="center center"
+          data-image-src="{{ url_for('static', filename='aboutcast.jpeg')}}">
+          <div class="about_cast">
+            <p class="white">ABOUT THE CAST</p>
+          </div>
+        </div>
+ </body>
+</html>
