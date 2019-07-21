@@ -1,12 +1,10 @@
 $(document).ready(function(){
 
 
+
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
     }
-
-    // $(".youtube_main").show();
-    
 
     function randomvid(){
 
@@ -47,7 +45,13 @@ $(document).ready(function(){
 
     randomvid();
 
-    
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        var bodyh = document.body.clientHeight;
+        console.log("Scroll height:" + scroll);
+        console.log("Page Height:" + bodyh);
+        console.log("Percentage:" + (scroll / bodyh * 100));
+    });;
 
 
     jQuery('.content_container').delegate('#twitter-widget-0', 'DOMSubtreeModified propertychange', function () {

@@ -334,6 +334,9 @@ body{
         width:25em;
         left:-1em;
     }
+    .circle{
+        display:none;
+    }
 
     
 
@@ -352,9 +355,7 @@ body{
     .re3 {
         display:none;
     }
-    .circle4{
-        display:block;
-    }
+
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -374,6 +375,7 @@ body{
     .circle{
         height:5.3em;
         width:5.3em;
+        display:block;
     }
 } 
     
