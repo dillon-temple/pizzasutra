@@ -98,7 +98,7 @@ body{
 
 
 .section{
-    width:95vw;
+    width:auto;
     height:20em;
     position:relative;
     background-image:radial-gradient(#24221F,#272727,black);;
@@ -112,6 +112,7 @@ body{
   background-image:url("/static/superpizza.png");
   background-size:cover;
   position:absolute;
+  display:none;
   top:-8em;
   border-radius:50%;
   animation-name: spin;
@@ -127,6 +128,7 @@ body{
     width:90%;
     height:75%;
     padding:1em;
+    display:none;
     background-color:#C10C1D;
     position:absolute;
     top:1.5em;
@@ -314,8 +316,8 @@ body{
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 500px) {
     .spin{
-        height:27em;
-        width:27em;
+        height:24em;
+        width:24em;
     }
 
     .re3, .re2 { display: none;}
