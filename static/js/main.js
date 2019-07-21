@@ -4,6 +4,8 @@ $(document).ready(function(){
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
     }
+
+    // $(".youtube_main").show();
     
 
     function randomvid(){
@@ -28,7 +30,7 @@ $(document).ready(function(){
 
             
             var random = Math.floor(Math.random() * playlist.length);
-            console.log(i);
+
             if(picked[random] === 1){
                 i--
                 continue;
@@ -41,10 +43,10 @@ $(document).ready(function(){
             document.getElementById("re" + i).src = video;
 
         }
-        console.log(picked);
     }
 
     randomvid();
+
     
 
 

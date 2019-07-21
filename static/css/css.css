@@ -149,12 +149,15 @@ body{
 
 
 .section2{
-    width:95vw;
+    width:auto;
     height:15em;
     background-image:radial-gradient(#24221F,#272727,black);;
     border:5px groove #F6E5D3;
-    display:inline-flex;
-    justify-content: center;
+    display:flex;
+    justify-content: space-between;
+    align-content:center;
+    flex-wrap:nowrap;
+    
 }
 .random_sutra{
     display:inline-block;
@@ -166,17 +169,17 @@ body{
 }
 .random_episode{
     background:#C10C1D;
-    height:12em;
-    width:18.5em;
     margin:1em 0.2em 0.5em 0.2em;
+    flex-grow:1;
     display:flex;
     justify-content: center;
     align-items:center;
     border-radius:1em;
+
 }
 .new_youtube2{
-    height:11em;
-    width: 18em;
+    height:95%;
+    width: 95%;
 }
 
 
@@ -212,6 +215,7 @@ body{
 .youtube_main{
     height:11em;
     width:18em;
+    margin-top:10em;
     background-color:#C10C1D;
     display:flex;
     justify-content:center;
@@ -219,18 +223,15 @@ body{
     border:2px solid black;
     border-radius:1em;
     animation-name:fadeIn;
-    animation-delay:2s;
+    /* animation-delay:2s; */
     animation-duration: 5500ms;
      /* animation-iteration-count: infinite; */
      animation-timing-function: ease-in; 
 }
 
 .new_youtube{
-    height:10em;
-    width: 17em;
-    background-color:black;
-    color:black;
-    top:5vh;
+    height:95%;
+    width: 95%;
 }
 
 
@@ -244,7 +245,7 @@ body{
     border-radius:50%;
     border:3.5px groove #F6E5D3;
     background-color:white;
-    margin:2em;
+    margin:1.5em;
 }
 .circle1{
     background-image:url("/static/para1.jpeg");
@@ -310,14 +311,24 @@ body{
     }
 }
 
-
+@media only screen and (max-width: 340px){
+    .spin{
+        display:none;
+    }
+    .youtube_main{
+        height:9em;
+        width:14em;
+    }
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 500px) {
     .spin{
-        height:26em;
-        width:26em;
+        height:25em;
+        width:25em;
         left:-1em;
     }
+
+    
 
     .re3, .re2 { display: none;}
 } 
@@ -350,6 +361,9 @@ body{
     .circle{
         height:5.3em;
         width:5.3em;
+    }
+    .youtube_main{
+        margin-top:5em;
     }
 
 } 
