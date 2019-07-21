@@ -16,7 +16,7 @@
 
 /* WRAPPERS */
 body{
-    overflow:hidden;
+    overflow-x:hidden;
     background-color:black;
 }
 
@@ -58,7 +58,7 @@ body{
     display:flex;
     justify-content: space-between;
     align-items:center;
-    width:100vw;
+    width:90vw;
     height:5em;
     background-image:radial-gradient(#BF271D,#AE000E,#D10010);
     position:fixed;
