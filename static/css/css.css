@@ -15,6 +15,11 @@
 }
 
 /* WRAPPERS */
+html{
+    width:100vw;
+    overflow-x:hidden;
+    -webkit-text-size-adjust: none;
+}
 body{
     overflow-x:hidden;
     width:100vw;
@@ -23,30 +28,47 @@ body{
 
 .wrapper{
     height:75vh;
+    width:100%;
+    min-height:270px;
     padding:1em;
     display:flex;
     background:transparent;
     flex-direction:row-reverse;
     align-items:center;
     flex-wrap:nowrap;
+    background-image:url("/static/pizzalight.jpeg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
 }
 .wrapper2{
     height:75vh;
+    width:100%;
     padding:1em;
-    display:flex;
+    min-height:270px;
     background:transparent;
-    flex-direction:row;
-    flex-flow:wrap;
-    align-items:center;
-    justify-content:space-around;
+    background-image:url("/static/nom.jpeg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
 }
 .wrapper3{
     background:transparent;
-    height:90vh;
+    height:85vh;
+    width:100%;
     max-height:1700px;
+    background-image:url("/static/aboutcast.jpeg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
 }
 /*  */
 /* HEADER */
+
+a{
+    font-family:impact;
+    color:blue;
+}
 
 .header_space{
     height:4em;
@@ -55,33 +77,50 @@ body{
 .header_text{
     color:white;
     text-shadow:0.3em 0.3em black;
+    font-size:1em;
+    margin-left:1em;
 }
 .header{
     display:flex;
     justify-content: space-between;
     align-items:center;
     width:100vw;
-    height:5em;
+    height:4.3em;
     background-image:radial-gradient(#BF271D,#AE000E,#D10010);
     position:fixed;
     z-index:5;
-    border:2px solid black;
+    border:2px groove white;
     border-radius:8px;
     padding:0.5em,1em,0.5em,1em;
+    
+}
+
+.footer{
+    width:100vw;
+    height:2.5em;
+    background-image:radial-gradient(#BF271D,#AE000E,#D10010);
+    border:2px groove white;
+    border-radius:8px;
+    font-family: Impact;
+    color:white;
+    padding: 0.5em;
+    text-align:center;
 }
 
 .socialmedia{
-    width:60%;
+    height:78%;
+    width:50%;
     background-color:white;
-    border-radius:3em;
+    border-radius:20%;
     border:2pt black solid;
     display:flex;
     justify-content:space-around;
+    margin-right:1em;
 }
 .sm_icon{
-    height:2.2em;
-    width:2.2em;
-    margin:0.5em;
+    height:1.5em;
+    width:1.5em;
+    margin:1em 0.5em 0.5em 0.5em;
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     transition-duration: 0.3s;
@@ -121,6 +160,8 @@ body{
   animation-timing-function: linear; 
   max-height:1030px;
   max-width:1030px;
+  overflow:hidden;
+  display:none;
 
 }
 
@@ -150,10 +191,12 @@ body{
 
 
 .section2{
-    width:auto;
+    width:100vw;
     height:15em;
     background-image:radial-gradient(#24221F,#272727,black);;
-    border:5px groove #F6E5D3;
+    border-left:5px groove #F6E5D3;
+    border-right:5px groove #F6E5D3;
+    border-bottom:5px groove #F6E5D3;
     display:flex;
     justify-content: space-between;
     align-content:center;
@@ -161,16 +204,18 @@ body{
     
 }
 .random_sutra{
-    display:inline-block;
-    flex: 0 0 100%;
-    height: 3em;
+    height:3em;
+    width:100vw;
     color:white;
     text-align:center;
     text-shadow:0.3em 0.3em black;
+    border-top:5px groove #F6E5D3;
+    border-left:5px groove #F6E5D3;
+    border-right:5px groove #F6E5D3;
 }
 .random_episode{
     background:#C10C1D;
-    margin:1em 0.2em 0.5em 0.2em;
+    margin:1.2em 0.5em 0.5em 0.5em;
     flex-grow:1;
     display:flex;
     justify-content: center;
@@ -183,42 +228,113 @@ body{
     width: 95%;
 }
 
+.re2{
+    display:none;
+}
+
 
 /*  */
 
 
 
+
+
+/* Cast info */
+
 .black{
     color:black;
 }
-.white{
+.cast_name{
     color:white;
 }
-
-
+.about_cast_header{
+    font-family:impact;
+    text-decoration: underline;
+    margin-top:0.8em;
+    color:white;
+    font-size:1.5em;
+}
 
 .about_cast{
-    width:85vw;
-    height:70vh;
+    font-family:Impact;
+    width:85%;
+    height:75%;
     background: rgb(0, 0, 0, 0.5);
     display:inline-block;
     position:absolute;
     left:6vw;
-    margin-top:14vh;
-    overflow-x:hidden;
-    overflow-y:auto;
+    margin-top:1em;
+    overflow:hidden;
     border: 1px black solid;
     border-radius:25px;
-    text-shadow:0.3em 0.3em black;
     text-align:center;
 }
 
+.cast_info{
+    font-family:Impact;
+    display:none;
+    color:white;
+    margin:0.5em;
+    animation-name:fadeIn;
+    animation-duration:1s;
+    font-size:1.1em;    
+}
+
+.cast_button{
+    height:2.5em;
+    width:7em;
+    background-image:radial-gradient(#BF271D,#AE000E,#D10010);
+    color:white;
+    text-decoration:underline;
+    border: 1.5px groove white;
+    font-size: 0.7em;
+    display:block;
+    margin:0 auto;
+}
+
+/**/
+
+
+
+
+
+
+/* CIRCLES */
+
+
+.circle{
+    width:5.2em;
+    height:5.2em;
+    border-radius:50%;
+    border:3.5px groove #F6E5D3;
+    background-color:white;
+    display:inline-block;
+    background-size:cover;
+    background-position:center;
+    margin: 3.5em 0.5em 0em 0.5em;
+}
+.circle1{
+    background-image:url("/static/port2.jpg");
+}
+.circle2{
+    background-image:url("/static/port1.jpg");
+}
+.circle3{
+    background-image:url("/static/port3.jpg");
+}
+.circle4{
+    background-image:url("/static/port4.jpg");
+}
+
+/*  */
+
+/*Youtube*/
 .youtube_main{
-    height:11em;
-    width:18em;
-    margin-top:5em;
+    height:10em;
+    width:16em;
+    margin-right:1em;
     background-color:#C10C1D;
-    display:flex;
+    display:none;
     justify-content:center;
     align-items:center;
     border:2px solid black;
@@ -236,39 +352,6 @@ body{
 }
 
 
-
-
-/* CIRCLES */
-
-.circle{
-    width:5em;
-    height:5em;
-    border-radius:50%;
-    border:3.5px groove #F6E5D3;
-    background-color:white;
-    margin:1.5em;
-}
-.circle1{
-    background-image:url("/static/para1.jpeg");
-    background-size:contain;
-}
-.circle2{
-    background-image:url("/static/para2.jpeg");
-    background-size:cover;
-    background-position:center;
-}
-.circle3{
-    background-image:url("/static/para3.jpeg");
-    background-size:cover;
-    background-position:center;
-}
-.circle4{
-    background-image:url("/static/para4.jpeg");
-    background-size:cover;
-    background-position:center;
-}
-
-/*  */
 
 
 .hvr-grow-rotate {
@@ -312,89 +395,97 @@ body{
     }
 }
 
-@media only screen and (max-width: 300px){
-    .spin{
-        display:none;
+.bubble{
+    animation:bubble_to_box 0.7s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+@keyframes bubble_to_box{
+    0% {border-radius: 50%; width: 6em; height:6em;}
+    25% {border-radius: 30%; width: 10em; height:8em;}
+    50% {border-radius: 20%; width: 12em; height:9em;}
+    75% {border-radius: 10%; width: 14em; height:10em;}
+    100% {border-radius: 5%; width: 18em; height:10em;}
+ }
+
+
+
+
+@media only screen and (min-width: 300px){
+    *{
+        font-size:12.5pt;
     }
+}
+@media only screen and (min-width: 375px){
+    *{
+        font-size:12.5pt;
+    }
+    .circle{
+        margin: 3.5em 1em 0em 1em;
+    }
+}
+
+
+
+@media only screen and (min-width: 480px) {
+    *{
+        font-size:13pt;
+    }
+
     .youtube_main{
-        height:9em;
-        width:14em;
+        display:flex;
     }
-}
-@media only screen and (min-width: 350px){
-    .circle4{
-        display:none;
+
+    .circle{
+        margin: 4em 1.5em 0em 1.5em;
     }
+
 }
+
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 600px) {
+    *{
+        font-size:13.8pt;
+    }
+
     .spin{
-        height:25em;
-        width:25em;
+        display:block;
+        height:29em;
+        width:29em;
         left:-1em;
     }
+
+    .re2 { display: inline-block;}
+
+
     .circle{
-        display:none;
-    }
-
-    
-
-    .re3, .re2 { display: none;}
-} 
-
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 500px) {
-    *{ 
-        font-size: 12pt;
-    }
-    .header_text{
-        font-size: 16pt;
-    }
-    .re3 {
-        display:none;
+        margin: 4em 2em 0em 0em
     }
 
 } 
+
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 732px) {
     *{
-        font-size: 14pt;
+        font-size:14.8pt;
     }
-    .header_text{
-        font-size:19pt;
-    }
-    .header{
-        height:4em;
-    }
-    .wrapper, .wrapper2{
-        max-height:480px;
-    }
-    .circle{
-        height:5.3em;
-        width:5.3em;
-        display:block;
-    }
-} 
+}
     
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     *{
-        font-size:17pt;
+        font-size:15.8pt;
     }
-    .wrapper, .wrapper2, .wrapper3{
-        max-height:850px;
-    }
+
     .header{
         justify-content:space-around;
     }
-    .header_text{
-        font-size:23pt;
-    }
-    .invis{
-        display:none;
+
+    .circle{
+        margin: 4em 1.8em 0em 0em
     }
 
 
@@ -403,21 +494,54 @@ body{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     *{
-        font-size:21pt;
+        font-size:17pt;
     }
     .content_container{
         max-width:1200px;
         left:calc(100% - 1250px);
     }
-    .circle{
-        height:4.8em;
-        width:4.8em;
-    }
-
 
 }
 @media only screen and (min-width: 1400px) {
-    .re3{
-        display:flex;
+    *{
+        font-size:19pt;
+    }
+
+    .youtube_main{
+        font-size:22pt;
+        margin-right:5em;
+    }
+
+    .spin{
+        display:block;
+        height:37em;
+        width:37em;
+        left:-1em;
     }
 }
+
+
+ @media only screen and (orientation:landscape) and (min-width:450px) and (max-width:814px){
+    .wrapper, .wrapper2{
+        height:95vh;
+    }
+    .wrapper3{
+        height:110vh;
+    }
+
+    .about_cast{
+        font-size:10.5pt;
+        height:105%;
+    }
+
+    .about_cast_header{
+        margin:0em;
+    }
+
+    .circle{
+        margin:4em 1em 0em 1em;
+    }
+
+
+
+ }

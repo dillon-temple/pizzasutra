@@ -13,8 +13,7 @@
 
   <body>
     <div class="header">
-      <div class="invis"></div>
-      <a class="header_text">PIZZA SUTRA</a>
+      <p class="header_text">PIZZA SUTRA</p>
       <div class="socialmedia">
         <a href="https://www.facebook.com/pizzasutramke/"><img class="sm_icon" src="{{ url_for('static', filename='facebook.png')}}"></a>
         <a href="https://www.youtube.com/channel/UCL6rEkDZjr-jzuPWLrO0bew/featured"><img class="sm_icon" src="{{ url_for('static', filename='youtube.png')}}"></a>
@@ -23,7 +22,8 @@
       </div>
     </div>
     <div class="header_space"></div>
-    <div class="wrapper" data-parallax="scroll" data-speed="0.05" data-naturalHeight="1365px" data-naturalWidth="2048px" data-position="center center" data-image-src="{{ url_for('static', filename='pizzalight.jpeg')}}">
+    <div class="wrapper">
+    <!-- <div class="wrapper" data-parallax="scroll" data-speed="0.05" data-naturalHeight="1365px" data-naturalWidth="2048px" data-position="center center" data-image-src="{{ url_for('static', filename='pizzalight.jpeg')}}"> -->
       <div class="youtube_main">
       <iframe class="new_youtube"id="re0"src="" frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -39,13 +39,12 @@
                   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
     </div>
-    <div class="wrapper2" data-parallax="scroll" data-speed="0.1" data-naturalHeight="960px" data-naturalWidth="960px" data-position="center center"
+    <div class="wrapper2"></div>
+    <!-- <div class="wrapper2" data-parallax="scroll" data-speed="0.1" data-naturalHeight="960px" data-naturalWidth="960px" data-position="center center"
       data-image-src="{{ url_for('static', filename='nom.jpeg')}}">
-        <div class="circle circle1"></div>
-        <div class="circle circle2"></div>
-        <div class="circle circle3"></div>
-        <div class="circle circle4"></div>
-    </div>
+
+    </div> -->
+        <div class="random_sutra">RANDOMSUTRA</div>
         <div class="section2">
           <div class="random_episode">
             <iframe class="new_youtube2 re1" id="re1" src="" frameborder="0"
@@ -57,17 +56,22 @@
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
           </iframe>
         </div>
-          <!-- <div class="random_episode re3" >
-            <iframe class="new_youtube2" id="re3" src="" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-          </iframe>
-        </div> -->
         </div>
-        <div class="wrapper3" data-parallax="scroll" data-speed="0.1" data-naturalHeight="1251px" data-naturalWidth="2987px" data-position="center center"
-          data-image-src="{{ url_for('static', filename='aboutcast.jpeg')}}">
+        <!-- <div class="wrapper3" data-parallax="scroll" data-speed="0.1" data-naturalHeight="1251px" data-naturalWidth="2987px" data-position="center center"
+          data-image-src="{{ url_for('static', filename='aboutcast.jpeg')}}"> -->
+          <div class="wrapper3">
           <div class="about_cast">
-            <p class="white">ABOUT THE CAST</p>
+            <p class="about_cast_header">ABOUT THE CAST</p>
+                <div class="circle circle1" id="circlemaster"></div>
+                <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+                <div class="circle circle4"></div>
+            <div class="cast_info"></div>
+            <div class="cast_button">GO BACK</div>
           </div>
         </div>
+
+        <div class="footer">For all business and collaboration inquries - pizzasutramke@gmail.com</div>
+ 
  </body>
 </html>
