@@ -74,7 +74,7 @@ $(document).ready(function(){
     $(".circle1").click(function () {
         $(".cast_info").html(bill);
         if (window.innerHeight > window.innerWidth) {
-            $(".circle").css("margin-top","1.5em");
+            $(".circle").css("margin-top","1.2em");
         } else {
             $(".circle").css("margin-top", "0em");
         }
@@ -89,7 +89,7 @@ $(document).ready(function(){
     $(".circle2").click(function () {
         $(".cast_info").html(serg);
         if (window.innerHeight > window.innerWidth) {
-            $(".circle").css("margin-top", "1.5em");
+            $(".circle").css("margin-top", "1.2em");
         } else {
             $(".circle").css("margin-top", "0em");
         }
@@ -104,7 +104,7 @@ $(document).ready(function(){
     $(".circle3").click(function () {
         $(".cast_info").html(jen);
         if (window.innerHeight > window.innerWidth) {
-            $(".circle").css("margin-top", "1.5em");
+            $(".circle").css("margin-top", "1.2em");
         } else {
             $(".circle").css("margin-top", "0em");
         }
@@ -119,7 +119,7 @@ $(document).ready(function(){
     $(".circle4").click(function () {
         $(".cast_info").html(david);
         if (window.innerHeight > window.innerWidth) {
-            $(".circle").css("margin-top", "1.5em");
+            $(".circle").css("margin-top", "1.2em");
         } else {
             $(".circle").css("margin-top", "0em");
         }
