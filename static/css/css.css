@@ -42,7 +42,7 @@ body{
     background-position:center;
 }
 .wrapper2{
-    height:75vh;
+    height:90vh;
     width:100%;
     padding:1em;
     min-height:270px;
@@ -54,7 +54,7 @@ body{
 }
 .wrapper3{
     background:transparent;
-    height:85vh;
+    height:95vh;
     width:100%;
     max-height:1700px;
     background-image:url("/static/aboutcast.jpeg");
@@ -97,7 +97,7 @@ a{
 
 .footer{
     width:100vw;
-    height:2.5em;
+    height:2em;
     background-image:radial-gradient(#BF271D,#AE000E,#D10010);
     border:2px groove white;
     border-radius:8px;
@@ -132,6 +132,7 @@ a{
 .sm_icon:hover, .sm_icon:focus, .sm_icon:active {
   transform: scale(1.15) rotate(6deg);
 }
+
 
 /* FIRST SECTION */
 
@@ -192,18 +193,48 @@ a{
 
 .section2{
     width:100vw;
-    height:15em;
-    background-image:radial-gradient(#24221F,#272727,black);;
-    border-left:5px groove #F6E5D3;
-    border-right:5px groove #F6E5D3;
-    border-bottom:5px groove #F6E5D3;
+    height:17em;
+    background-image:radial-gradient(#24221F,#272727,rgba(0, 0, 0, 0.836));;
+    border:5px groove #F6E5D3;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content:center;
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
     
 }
-.random_sutra{
+
+.merch_header{
+    height:22%;
+    min-width:100%;
+    text-align:center;
+    color:white;
+}
+
+.merch_box{
+    margin:0em 0.5em 0em 0.5em;
+    width:25%;
+    height:78%;
+    text-align:center;
+    display:inline-block;
+}
+.merch_box1{
+    display:none;
+}
+
+.merch{
+    display:none;
+    height:100%;
+    filter: drop-shadow(0 0 0.75rem white);
+}
+.shirt{
+    height:100%;
+}
+
+.shirt:hover, .shirt:focus, .shirt:active {
+  transform: scale(1.05);
+  transition-duration:750ms;
+}
+/* .random_sutra{
     height:3em;
     width:100vw;
     color:white;
@@ -222,15 +253,15 @@ a{
     align-items:center;
     border-radius:1em;
 
-}
+} */
 .new_youtube2{
     height:95%;
     width: 95%;
 }
 
-.re2{
+/* .re2{
     display:none;
-}
+} */
 
 
 /*  */
@@ -250,7 +281,6 @@ a{
 .about_cast_header{
     font-family:impact;
     text-decoration: underline;
-    margin-top:0.8em;
     color:white;
     font-size:1.5em;
 }
@@ -261,9 +291,8 @@ a{
     height:85%;
     background: rgb(0, 0, 0, 0.5);
     display:inline-block;
-    position:absolute;
-    left:6vw;
-    margin-top:1em;
+    margin:1em 1em 0em 1em;
+    padding:1em 1em 1em 1em;
     overflow:hidden;
     border: 1px black solid;
     border-radius:25px;
@@ -341,7 +370,7 @@ a{
     border-radius:1em;
     animation-name:fadeIn;
     /* animation-delay:2s; */
-    animation-duration: 5500ms;
+    animation-duration: 3500ms;
      /* animation-iteration-count: infinite; */
      animation-timing-function: ease-in; 
 }
@@ -396,7 +425,7 @@ a{
 }
 
 .bubble{
-    animation:bubble_to_box 0.7s;
+    animation:bubble_to_box 0.3s;
     animation-fill-mode: forwards;
     animation-direction: normal;
 }
@@ -409,6 +438,17 @@ a{
     100% {border-radius: 5%; width: 18em; height:10em;}
  }
 
+ .shirt_pulse{
+     animation:shirt_pulse 1.3s infinite;
+     animation-direction:alternate;
+ }
+
+ @keyframes shirt_pulse{
+     0%{filter: drop-shadow(0 0 0.5em #CA9F3E)}
+     33%{filter: drop-shadow(0 0 1em #CA9F3E)}
+     66%{filter: drop-shadow(0 0 1.5em #CA9F3E)}
+     100%{filter: drop-shadow(0 0 1.8em #CA9F3E)}
+ }
 
 
 
@@ -455,6 +495,7 @@ a{
     .re2 { display: inline-block;}
 
 
+
     .circle{
         margin: 3em 2em 0em 0em
     }
@@ -466,6 +507,9 @@ a{
 @media only screen and (min-width: 732px) {
     *{
         font-size:14.8pt;
+    }
+    .merch_box1{
+        display:inline-block
     }
 }
     
